@@ -1,6 +1,6 @@
 # 《WitchFront 魔女前線》
 
-[![Version](https://img.shields.io/badge/version-v1.1.2-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-v1.1.3-blue.svg)](CHANGELOG.md)
 [![Godot](https://img.shields.io/badge/Godot-v4.7.2-478cbf?logo=godot-engine&logoColor=white)](https://godotengine.org)
 
 《WitchFront 魔女前線》是一款以科幻武裝少女兵器為核心題材的 2D 俯視角射擊／彈幕 Roguelite 動作遊戲。玩家將操控搭載最新外骨骼武裝的女武神-01（春花），在前線防線迎擊外星機械巨構要塞的全面侵襲。
@@ -9,6 +9,20 @@
 
 ## 📢 最新更新日誌 (Changelog)
 
+### [v1.1.3] - 2026-09-15
+
+#### 🎯 鎖定指示與瞄準系統全面升級
+- **判定範圍鎖定環 (`LockonIndicator`)**：角色胸口 Chest 錨點常駐顯示判定環，外圈隨身體轉動、內圈即時指向滑鼠；以最高層級渲染不被角色與特效遮擋，取代原本的 HitboxMarker 十字脈衝標記。
+- **滑鼠自訂準星 (`MouseCrosshair`)**：桌機切換至手動瞄準時，以 lockon_mouse 雙環準星取代系統游標（內圈緩慢自轉）；暫停、角色陣亡、切回自動瞄準或離開場景時自動還原系統游標。
+- **自動瞄準開關**：戰鬥中按 T 快速切換，暫停選單新增「自動瞄準：開/關」按鈕；關閉時桌機子彈朝滑鼠方向射擊。
+
+#### 🦴 角色骨架與鏡頭演出精進
+- **CharacterRig 新增 Chest 胸腔骨架層級**，胸口錨點與判定同步改依 Chest 計算，浮沉轉身不再飄移。
+- **BOSS 登場鏡頭瞬間對焦（snap）**與演出期間解除地圖邊界限制；**倒數數字改掛 CanvasLayer** 不再被 BOSS 遮擋。
+
+#### 🌊 刷怪與修復
+- **畫面外環繞式刷怪**：小怪一律從鏡頭視野外圍（200px 緩衝）生成。
+- **修復**：大廳魔女裝甲 Resource 路徑（資料夾重構遺留）導致裝備彈窗無法載入，已修正。
 ### [v1.1.2] - 2026-09-14
 
 #### 🗺️ 全新第 2、3 關正式實裝與大廳選關

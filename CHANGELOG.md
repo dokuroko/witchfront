@@ -1,5 +1,23 @@
 # 《WitchFront 魔女前線》更新日誌 (Changelog)
 
+## [v1.1.3] - 2026-09-15
+
+### 🎯 鎖定指示與瞄準系統全面升級
+- **判定範圍鎖定環 (`LockonIndicator`)**：角色胸口 Chest 錨點常駐顯示判定環，外圈隨身體轉動、內圈即時指向滑鼠；以最高層級渲染不被角色與特效遮擋，取代原本的 HitboxMarker 十字脈衝標記。
+- **滑鼠自訂準星 (`MouseCrosshair`)**：桌機切換至手動瞄準時，以 lockon_mouse 雙環準星取代系統游標（內圈緩慢自轉）；暫停、角色陣亡、切回自動瞄準或離開場景時自動還原系統游標。
+- **自動瞄準開關**：`SkillManager.player_stats` 新增 `auto_aim`（單一真相來源）。戰鬥中可按 T 快速切換，暫停選單新增「自動瞄準：開/關」按鈕同步顯示狀態；關閉時桌機子彈朝滑鼠方向射擊、手機朝移動方向射擊。
+
+### 🦴 角色骨架與鏡頭演出精進
+- **CharacterRig 新增 Chest 胸腔骨架層級**：Neck／Head 改掛於 Torso → Chest 之下；胸口錨點、圍巾與判定同步位置全面改依 Chest 計算，角色浮沉時以胸口為樞紐補償旋轉偏移，身體轉動不再造成錨點飄移。
+- **BOSS 登場鏡頭瞬間對焦**：`focus_camera_on()` 新增 `snap` 參數，三關 BOSS 登場倒數直接切至對焦構圖不再滑動；演出期間暫時解除地圖邊界限制，對焦結束自動恢復。
+- **BOSS 倒數數字 CanvasLayer 化**：登場倒數大型數字改掛獨立 CanvasLayer（layer 20），不再被 BOSS 本體遮擋（三關 BOSS 適用）。
+
+### 🌊 刷怪與關卡體驗調整
+- **畫面外環繞式刷怪**：三關小怪出生點改為依目前鏡頭視野外圍（200px 緩衝）環繞取點，含多次取樣與地圖邊界 fallback，杜絕敵人在鏡頭內憑空生成。
+
+### 🛠️ 修復
+- **大廳魔女裝甲載入修復**：資料夾重構後 `main_hub.gd` 裝甲 Resource 路徑未同步（`res://resources/` → `res://resources/witcharm/`），導致裝備彈窗無法載入裝甲數值，已修正。
+- 同步修正 `docs/hub_preview.png.import`、`texture/hitbox_cross_flare.png.import` 重構遺留的內部路徑。
 ## [v1.1.2] - 2026-09-14
 
 ### 🗺️ 全新第 2、3 關正式實裝與大廳選關
