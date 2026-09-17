@@ -1,6 +1,6 @@
 # 《WitchFront 魔女前線》
 
-[![Version](https://img.shields.io/badge/version-v1.2.2-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-v1.2.4-blue.svg)](CHANGELOG.md)
 [![Godot](https://img.shields.io/badge/Godot-v4.7.2-478cbf?logo=godot-engine&logoColor=white)](https://godotengine.org)
 
 《WitchFront 魔女前線》是一款以科幻武裝少女兵器為核心題材的 2D 俯視角射擊／彈幕 Roguelite 動作遊戲。玩家將操控搭載最新外骨骼武裝的女武神-01（春花），在前線防線迎擊外星機械巨構要塞的全面侵襲。
@@ -8,6 +8,15 @@
 ---
 
 ## 📢 最新更新日誌 (Changelog)
+
+### [v1.2.4] - 2026-09-18
+
+#### 🦀 第 1 關完全體 BOSS 重構：套路化攻擊系統
+- **巨螯俯衝**：雙螯蓄紅光、頭頂 2 秒倒數（最後 1 秒鎖定方向供側閃）→ 1450 px/s 極速衝撞，撞後具 0.5 秒破綻硬直。
+- **甲殼導彈（全新可攔截兵種）**：雙螯輪流發射 6 枚追蹤導彈（具尾焰特效，HP 260），可被子彈/斬擊/技能摧毀或甩開。
+- **扇形能量散彈**：左右螯輪流以扇形三連射發射大光球彈幕。
+- **四重套路排程**：引入「壓制、突襲、飽和、全套組合」AI 攻擊循環，大幅縮短發呆間隔，節奏緊湊明快。
+- **取消二階段分離**：完全體全程合體作戰至總血量歸零，停用模組自主亂射，總 HP 歸零直接進入擊破慢動作與聖光演出。
 
 ### [v1.2.2] - 2026-09-17
 
