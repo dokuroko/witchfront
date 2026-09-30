@@ -1,6 +1,6 @@
 # 《WitchFront 魔女前線》
 
-[![Version](https://img.shields.io/badge/version-v1.4.13-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-v1.4.14-blue.svg)](CHANGELOG.md)
 [![Godot](https://img.shields.io/badge/Godot-v4.7.2-478cbf?logo=godot-engine&logoColor=white)](https://godotengine.org)
 
 《WitchFront 魔女前線》是一款以科幻武裝少女兵器為核心題材的 2D 俯視角射擊／彈幕 Roguelite 動作遊戲。玩家將操控搭載最新外骨骼武裝的女武神-01（春花），在前線防線迎擊外星機械巨構要塞的全面侵襲。
@@ -8,6 +8,14 @@
 ---
 
 ## 📢 最新更新日誌 (Changelog)
+
+### [v1.4.14] - 2026-10-01
+
+#### 🍏 Mac / Safari / 中文輸入法跨平台按鍵深度相容
+- **修復 Mac 按 V/B 無效問題**：
+  - 改用實體鍵盤掃描碼（`physical_keycode`）＋`key_label`＋`unicode` 多層防護，徹底解決 macOS 瀏覽器 WebAssembly 環境下 `keycode` 為 0 導致判定失效的問題。
+  - 同步升級 `Input.is_physical_key_pressed(KEY_V)` 與 `InputMap` 動作註冊，確保 Mac 瀏覽器長按 V 鍵穩定全自動連射。
+  - 競技場 H 鍵切換重武裝同步支援 `physical_keycode`。
 
 ### [v1.4.13] - 2026-10-01
 

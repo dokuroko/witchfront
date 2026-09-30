@@ -1,5 +1,16 @@
 # 《WitchFront 魔女前線》更新日誌 (Changelog)
 
+## [v1.4.14] - 2026-10-01（Mac/Safari 瀏覽器與非美式/中文輸入法鍵盤相容性深度修復：V/B 實體鍵 physical_keycode 支援）
+
+### 🍏 Mac / Safari / 中文輸入法跨平台按鍵深度相容
+- **修復 Mac 按 V/B 無效問題**：
+  - 原因：macOS / Safari 在 WebAssembly 環境下（或中文注音/拼音輸入法啟用時），`KeyboardEvent.key` 產生的 `event.keycode` 會為 0（`KEY_NONE`）或輸入法字元，導致過去只判斷 `event.keycode == KEY_V` 失效。
+  - 解法：重構判定邏輯，改為**實體鍵盤掃描碼（`physical_keycode`）＋`key_label`＋`unicode` 多層防護**（`event.physical_keycode == KEY_V / KEY_B`），無論 macOS 系統語言、中文輸入法或 CapsLock 為何，皆能 100% 準確抓取物理鍵位。
+  - 長按開火查詢：同步升級 `Input.is_physical_key_pressed(KEY_V)`，確保 Mac 瀏覽器長按 V 鍵穩定全自動連射。
+- **專案層級 InputMap 注入**：
+  - 在 `project.godot` 與 `player._ensure_input_map()` 中正式註冊 `attack_main`（Mouse Left + Physical Key V）與 `attack_heavy`（Mouse Right + Physical Key B），與 WASD 同樣走 Godot 引擎原生平台抽象。
+- **競技場 H 鍵切換同步修復**：`mecha_arena.gd` 的 H 鍵熱切換重武裝同步支援 `physical_keycode` 與 `unicode`，Mac 環境亦能按 H 即時切換大劍↔榴彈砲。
+
 ## [v1.4.13] - 2026-10-01（PC 鍵盤控制擴充：V/B 鍵對應滑鼠左/右鍵、長按連射支援）
 
 ### ⌨️ PC 操作擴充（V/B 鍵映射）
