@@ -1,6 +1,6 @@
 # 《WitchFront 魔女前線》
 
-[![Version](https://img.shields.io/badge/version-v1.4.12-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-v1.4.13-blue.svg)](CHANGELOG.md)
 [![Godot](https://img.shields.io/badge/Godot-v4.7.2-478cbf?logo=godot-engine&logoColor=white)](https://godotengine.org)
 
 《WitchFront 魔女前線》是一款以科幻武裝少女兵器為核心題材的 2D 俯視角射擊／彈幕 Roguelite 動作遊戲。玩家將操控搭載最新外骨骼武裝的女武神-01（春花），在前線防線迎擊外星機械巨構要塞的全面侵襲。
@@ -8,6 +8,13 @@
 ---
 
 ## 📢 最新更新日誌 (Changelog)
+
+### [v1.4.13] - 2026-10-01
+
+#### ⌨️ PC 鍵盤控制擴充（V/B 鍵映射）
+- **V 鍵對應滑鼠左鍵**：按下立即擊發主武器，長按 V 鍵持續全自動連射（支援與滑鼠左鍵同時/交替操作，鍵盤連射不受鼠標懸停 UI 干擾）。
+- **B 鍵對應滑鼠右鍵**：按下立即施放重武裝（折疊大劍扇形橫斬／戰術榴彈砲 1000px 索敵自動瞄準重轟），自動過濾鍵盤 repeat echo 防止重複觸發。
+- **裝備整備頁提示同步**：大廳裝備頁重武裝標籤同步標註「右鍵/B鍵」。
 
 ### [v1.4.12] - 2026-10-01
 
