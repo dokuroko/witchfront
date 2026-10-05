@@ -1,6 +1,6 @@
 # 《WitchFront 魔女前線》
 
-[![Version](https://img.shields.io/badge/version-v1.4.14-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-v1.4.18-blue.svg)](CHANGELOG.md)
 [![Godot](https://img.shields.io/badge/Godot-v4.7.2-478cbf?logo=godot-engine&logoColor=white)](https://godotengine.org)
 
 《WitchFront 魔女前線》是一款以科幻武裝少女兵器為核心題材的 2D 俯視角射擊／彈幕 Roguelite 動作遊戲。玩家將操控搭載最新外骨骼武裝的女武神-01（春花），在前線防線迎擊外星機械巨構要塞的全面侵襲。
@@ -8,6 +8,15 @@
 ---
 
 ## 📢 最新更新日誌 (Changelog)
+
+### [v1.4.18] - 2026-10-05
+
+#### 🛸 無人機 3000 型 arm_3K 正式貼圖化與戰場/大廳等比校正
+- **專屬美術貼圖**：替換幾何佔位三角形，採用高精細貼圖 `arm_3K.png`。
+- **航行視角防顛倒**：水平鏡射機頭朝前，左半球轉向自動觸發 `flip_v` 避免倒飛。
+- **大廳雙子機展開**：裝備 1 個無人機3000即展開左右對稱 2 隻雙子機護衛（雙槽皆裝備為 4 隻編隊），與戰場同規格。
+- **戰場與大廳等比校正**：錨定角色骨架縮放，修復戰場被意外放大 3.7 倍問題，戰場與大廳相對角色比例完全 1:1。
+- **Web 匯出輕量化**：排除未引用外部聲音素材庫（減輕 200MB+ 負擔），極大降低網頁載入時間與記憶體壓力。
 
 ### [v1.4.14] - 2026-10-01
 
