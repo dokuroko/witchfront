@@ -1,6 +1,6 @@
 # 《WitchFront 魔女前線》
 
-[![Version](https://img.shields.io/badge/version-v1.4.1-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-v1.4.2-blue.svg)](CHANGELOG.md)
 [![Godot](https://img.shields.io/badge/Godot-v4.7.2-478cbf?logo=godot-engine&logoColor=white)](https://godotengine.org)
 
 《WitchFront 魔女前線》是一款以科幻武裝魔女少女為核心題材的 2D 俯視角射擊／彈幕 Roguelite 動作遊戲。玩家將操控搭載最新飛行裝甲的少女「春花」，在前線迎擊外星機械巨構要塞的全面侵襲。
@@ -8,6 +8,14 @@
 ---
 
 ## [公告] 最新更新日誌 (Changelog)
+
+### [v1.4.2] - 2026-10-18
+
+#### [關卡與戰鬥] 第八關星蝕級外星戰艦對艦作戰上線
+- **星蝕級外星戰艦對艦作戰全面上線**：開場倒數結束直接開戰，專屬戰鬥 BGM 採用 `Orbital Defense_stage03.ogg`。
+- **4 選 1 隨機戰艦動作池**：右開到左、左開到右、半舷截停 20 秒集火階段、主副雷射 3000px 貫穿全畫面扇面齊射。
+- **護衛機波次與戰地補給**：戰艦每次動作後接 30 隻混和小怪波次（一般 50%、急速 30%、射手 20%），清完掉落醫療包補藥（回血 35%）與戰術補給中寶箱；砲台擊破即時截獲寶箱。
+- **30% 損毀暴走機制**：全艦砲台損毀達 8 門（逾 30%）觸發暴走，每波護衛機嚴格限制 30 隻且每 30 秒一波強襲增援，殲滅一波給補藥，戰艦隨機動作持續並行。
 
 ### [v1.4.1] - 2026-10-17
 
