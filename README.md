@@ -1,6 +1,6 @@
 # 《WitchFront 魔女前線》
 
-[![Version](https://img.shields.io/badge/version-v1.4.2-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-v1.4.3-blue.svg)](CHANGELOG.md)
 [![Godot](https://img.shields.io/badge/Godot-v4.7.2-478cbf?logo=godot-engine&logoColor=white)](https://godotengine.org)
 
 《WitchFront 魔女前線》是一款以科幻武裝魔女少女為核心題材的 2D 俯視角射擊／彈幕 Roguelite 動作遊戲。玩家將操控搭載最新飛行裝甲的少女「春花」，在前線迎擊外星機械巨構要塞的全面侵襲。
@@ -8,6 +8,15 @@
 ---
 
 ## [公告] 最新更新日誌 (Changelog)
+
+### [v1.4.3] - 2026-10-19
+
+#### [系統與平衡] LV5特化安全修復、劍魚座節奏調整、完美迴避黃金窗口與教學關卡
+- **LV5 武器特化全域安全修復**：徹底根絕升級至 LV5 時 Dictionary key '5' 缺失崩潰；`SKILLS` 補齊 LV5 數值，`SkillManager` 提供越界自動回退 safe helper。
+- **重武裝射擊鎖定修復**：重武裝執行函式解除對輕武器禁射的不必要阻擋，修復重武裝蓄力發射問題。
+- **完美迴避判定優化**：窗口精準調優至 0.16 秒（約 10 幀），移除身周無條件保底，操作回饋更紮實。
+- **劍魚座機甲讀秒速度 -30%**：大 BOSS 與小 BOSS 蓄力前搖讀秒延長 ~43%，預警更清晰，反彈光球增至 6 顆。
+- **關卡推進**：第 0 關教學關卡流程完善、新增第 1 關「滿天都是敵人」4 波次小怪狂潮。
 
 ### [v1.4.2] - 2026-10-18
 
