@@ -1,6 +1,6 @@
 # 《WitchFront 魔女前線》
 
-[![Version](https://img.shields.io/badge/version-v1.4.3-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-v1.4.4-blue.svg)](CHANGELOG.md)
 [![Godot](https://img.shields.io/badge/Godot-v4.7.2-478cbf?logo=godot-engine&logoColor=white)](https://godotengine.org)
 
 《WitchFront 魔女前線》是一款以科幻武裝魔女少女為核心題材的 2D 俯視角射擊／彈幕 Roguelite 動作遊戲。玩家將操控搭載最新飛行裝甲的少女「春花」，在前線迎擊外星機械巨構要塞的全面侵襲。
@@ -8,6 +8,16 @@
 ---
 
 ## [公告] 最新更新日誌 (Changelog)
+
+### [v1.4.4] - 2026-10-27
+
+#### [系統與平衡] 行動端Web清晰化、BOSS體積放大1.5倍、無限戰場鏡像決鬥重構與F9/F10除錯鍵
+- **全域最高層快捷鍵 (F9 / F10)**：F9 一鍵重置所有遊戲進度（清除本地存檔與養成，回歸初始出廠設定）；F10 一鍵解放所有進度（金幣 99999、全武器滿星特化 LV5、全裝甲 LV10 滿等、全關卡通關、無限戰場解鎖、雙持解鎖）。
+- **行動端 Web 高解析度清晰化**：啟用 llow_hidpi，關閉 2D 像素捕捉，手機高解析螢幕渲染清晰銳利。
+- **BOSS 體積放大 1.5 倍**：第 2 關巨螯強襲、第 3 關劍魚座、第 4 關六儀座大 BOSS 與 Vanguard 精英機甲體積放大 1.5 倍。
+- **BOSS 戰 BGM 統一**：BOSS 戰統一採用熱血燃曲 Orbital Defense_stage03.ogg。
+- **劍魚座招式微調**：黑洞吸引力調柔為微弱牽引吸入感（75 px/s），斬擊新增清脆金屬「叮」聲反饋。
+- **無限戰場重構（純魔女鏡像決鬥）**：移除雜兵小怪，改為純鏡像魔女單挑決鬥（每波 1~3 隻，每 3 波空投補血物資），通關第 3 關即可解鎖。
 
 ### [v1.4.3] - 2026-10-19
 
